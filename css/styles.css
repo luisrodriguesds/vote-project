@@ -3,7 +3,8 @@ body{
 }
 
 .vote-item{
-  border: 1px solid #000;
+  border: 2px solid #1DA1F2;
   padding: 10px;
   color: #000;
 }
+
