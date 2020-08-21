@@ -23,9 +23,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="result.html">Votações criadas</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Meus votos</a>
-            </li>
+            @if(user)
+              
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Meus votos</a>
+                </li>
+            @endif
         </ul>
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Procure aqui" aria-label="Search" />
