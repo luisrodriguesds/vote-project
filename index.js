@@ -8,8 +8,12 @@ app.set('views', __dirname+'/views')
 app.use(express.static('public'))
 
 app.get('/', (request, response) => {
+    const name = 'Luis Rodrigues'
+
     
-    return response.render('index')
+    return response.render('index', {
+        name
+    })
 })
 
 
