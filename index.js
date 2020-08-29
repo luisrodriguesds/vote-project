@@ -16,9 +16,7 @@ app.get('/', (request, response) => {
     })
 })
 
-
 app.get('/login', (request, response) => {
-    
     return response.render('login')
 })
 
