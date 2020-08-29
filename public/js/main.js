@@ -8,6 +8,8 @@ function moduloNoturno(dadosPagina) {
          
          function clicar()
          {
+          const nav = document.querySelector('.navbar')
+          const subnav = document.querySelector('.nav-light')
            if(blackmode == 'Desligado')
            {
              corpo.style.background = 'black'
@@ -16,6 +18,10 @@ function moduloNoturno(dadosPagina) {
              a.style.color = 'white'
              blackmode = 'Ligado'
              a.innerText = 'Modo Normal'
+             nav.classList.remove('bg-primary')
+             nav.classList.add('bg-dark')
+             subnav.style.backgroundColor = '#484c4f';
+              document.querySelector('html').classList.add('night')
            }
            else if(blackmode == 'Ligado')
            {
@@ -25,6 +31,11 @@ function moduloNoturno(dadosPagina) {
              a.style.color = 'white'
              blackmode = 'Desligado'
              a.innerText = 'Modo Noturno'
+             nav.classList.remove('bg-dark')
+             nav.classList.add('bg-primary')
+             subnav.style.backgroundColor = '#e3f2fd';
+             document.querySelector('html').classList.remove('night')
+
            }  
            
          } 
