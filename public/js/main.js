@@ -41,6 +41,7 @@ function moduloNoturno(dadosPagina) {
          } 
  }
 
+ let current_font = 100
 function zoom(dadosPagina) {
 	var btnMais = dadosPagina.getElementById('btn-zoom-positivo')
 	var btnMenos = dadosPagina.getElementById('btn-zoom-negativo')
@@ -51,27 +52,32 @@ function zoom(dadosPagina) {
 	btnMenos.addEventListener('click', diminuirZoom)
 	var contClickMais = 0
 	var contClickMenos = 0
+  const body = document.querySelector('body')
 
 	function aumentarZoom() {
-		contClickMais = contClickMais + 1
-		contClickMenos = contClickMais
-		var valorAbsoluto = Math.abs(contClickMenos)
-		if (contClickMenos < 0) {
-			corpo.style.transform = 'scale(' + (1 - valorAbsoluto / 100) + ')'
-		} else {
-			corpo.style.transform = 'scale(' + (1 + contClickMais / 100) + ')'
-		} 
+		// contClickMais = contClickMais + 1
+		// contClickMenos = contClickMais
+		// var valorAbsoluto = Math.abs(contClickMenos)
+		// if (contClickMenos < 0) {
+		// 	corpo.style.transform = 'scale(' + (1 - valorAbsoluto / 100) + ')'
+		// } else {
+		// 	corpo.style.transform = 'scale(' + (1 + contClickMais / 100) + ')'
+    // } 
+    current_font+= 10
+    body.style.fontSize = current_font+'%'
 	}
 
 	function diminuirZoom() {
-		contClickMenos = contClickMenos - 1 
-		contClickMais = contClickMenos
-		var valorAbsoluto = Math.abs(contClickMenos)
-		if (contClickMenos < 0) {
-			corpo.style.transform = 'scale(' + (1 - valorAbsoluto / 100) + ')'
-		} else {
-			corpo.style.transform = 'scale(' + (1 + contClickMenos / 100) + ')'
-		}
+		// contClickMenos = contClickMenos - 1 
+		// contClickMais = contClickMenos
+		// var valorAbsoluto = Math.abs(contClickMenos)
+		// if (contClickMenos < 0) {
+		// 	corpo.style.transform = 'scale(' + (1 - valorAbsoluto / 100) + ')'
+		// } else {
+		// 	corpo.style.transform = 'scale(' + (1 + contClickMenos / 100) + ')'
+    // }
+    current_font-= 10
+    body.style.fontSize = current_font+'%'
 	}
 }
 
