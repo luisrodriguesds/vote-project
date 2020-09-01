@@ -1,7 +1,7 @@
 function moduloNoturno(dadosPagina) { 
          var a = dadosPagina.getElementById('botao')
          var corpo = dadosPagina.getElementsByTagName('body')[0]
-         console.log(corpo)
+        
          blackmode = 'Desligado'
          
          a.addEventListener('click', clicar)
@@ -39,4 +39,39 @@ function moduloNoturno(dadosPagina) {
            }  
            
          } 
-  }
+ }
+
+function zoom(dadosPagina) {
+	var btnMais = dadosPagina.getElementById('btn-zoom-positivo')
+	var btnMenos = dadosPagina.getElementById('btn-zoom-negativo')
+	var corpo = dadosPagina.getElementsByTagName('body')[0]
+
+	btnMais.addEventListener('click', aumentarZoom)
+
+	btnMenos.addEventListener('click', diminuirZoom)
+	var contClickMais = 0
+	var contClickMenos = 0
+
+	function aumentarZoom() {
+		contClickMais = contClickMais + 1
+		contClickMenos = contClickMais
+		var valorAbsoluto = Math.abs(contClickMenos)
+		if (contClickMenos < 0) {
+			corpo.style.transform = 'scale(' + (1 - valorAbsoluto / 100) + ')'
+		} else {
+			corpo.style.transform = 'scale(' + (1 + contClickMais / 100) + ')'
+		} 
+	}
+
+	function diminuirZoom() {
+		contClickMenos = contClickMenos - 1 
+		contClickMais = contClickMenos
+		var valorAbsoluto = Math.abs(contClickMenos)
+		if (contClickMenos < 0) {
+			corpo.style.transform = 'scale(' + (1 - valorAbsoluto / 100) + ')'
+		} else {
+			corpo.style.transform = 'scale(' + (1 + contClickMenos / 100) + ')'
+		}
+	}
+}
+
