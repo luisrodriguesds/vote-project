@@ -41,12 +41,49 @@ function moduloNoturno(dadosPagina) {
          } 
  }
 
+<<<<<<< HEAD
+=======
  let current_font = 100
+>>>>>>> d030722e5a967df93cf2e1f361798204406f6efd
 function zoom(dadosPagina) {
 	var btnMais = dadosPagina.getElementById('btn-zoom-positivo')
 	var btnMenos = dadosPagina.getElementById('btn-zoom-negativo')
 	var corpo = dadosPagina.getElementsByTagName('body')[0]
 
+<<<<<<< HEAD
+  btnMais.addEventListener('click', aumentarZoom)
+  
+  btnMenos.addEventListener('click', diminuirZoom)
+  var contClickMais =0
+  var contClickMenos =0
+	function aumentarZoom()
+  { 
+    contClickMais = contClickMais + 1
+    contClickMenos = contClickMais
+    if (contClickMenos<-1){
+      corpo.style.transform = 'scale(0.9' + (contClickMenos+11) + ')'
+    }
+    else{
+      corpo.style.transform = 'scale(' + (1 +contClickMais/100) + ')' 
+    }
+      
+        
+  }
+  function diminuirZoom()
+  { 
+    console.log(contClickMenos)
+    contClickMenos = contClickMenos - 1 
+
+    contClickMais = contClickMenos
+    if (contClickMenos<0){
+      corpo.style.transform = 'scale(0.9' + (contClickMenos+10) + ')' 
+    }
+    else{
+      corpo.style.transform = 'scale(' + (1 +contClickMenos/100) + ')'  
+    }
+  }
+}
+=======
 	btnMais.addEventListener('click', aumentarZoom)
 
 	btnMenos.addEventListener('click', diminuirZoom)
@@ -81,3 +118,4 @@ function zoom(dadosPagina) {
 	}
 }
 
+>>>>>>> d030722e5a967df93cf2e1f361798204406f6efd
