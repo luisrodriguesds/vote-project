@@ -9,5 +9,9 @@ body{
 }
 
 .night .card-title {
+<<<<<<< HEAD
   color: blue
+=======
+  color: black;
+>>>>>>> d030722e5a967df93cf2e1f361798204406f6efd
 }
