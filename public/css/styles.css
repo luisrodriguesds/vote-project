@@ -9,9 +9,17 @@ body{
 }
 
 .night .card-title {
-<<<<<<< HEAD
-  color: blue
-=======
   color: black;
->>>>>>> d030722e5a967df93cf2e1f361798204406f6efd
+}
+
+.night .card{
+  /* background: rgb(72, 76, 79); */
+}
+
+.night .card .btn {
+  background: rgb(72, 76, 79);
+}
+
+.night .header-home{
+  color: white !important;
 }
